@@ -1,0 +1,352 @@
+/* Styles for the entire body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: hsl(0, 0%, 95%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container for the Color Picker component */
+.color-picker-container {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  justify-content: space-between; /* Distribute space between main and history sections */
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 80vw; /* Adjust width as needed */
+  max-width: 1200px; /* Prevents exceeding a maximum width */
+  max-height: 90vh; /* Ensure the container doesn't exceed the viewport height */
+  overflow-y: auto; /* Allow vertical scrolling if content exceeds the container height */
+}
+
+/* Main content area for the color picker */
+.color-picker-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header styling */
+h1 {
+  margin: 20px 0;
+  font-size: 2.5rem;
+  color: hsl(210, 50%, 30%);
+  text-align: center;
+}
+
+/* Display box for the selected color */
+.color-display {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid hsl(0, 0%, 80%);
+  border-radius: 25px;
+  margin-bottom: 25px;
+  transition: 0.25s ease;
+}
+
+/* Text inside the color display */
+.color-display p {
+  color: hsl(0, 0%, 20%);
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Label for the color input */
+label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Styling for the color input element */
+input[type="color"] {
+  width: 75px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 3px solid hsl(0, 0%, 80%);
+  cursor: pointer;
+}
+
+/* Button to add color to favorites */
+button {
+  background-color: hsl(210, 50%, 50%);
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px; /* Add space between buttons and sections */
+}
+
+/* Hover effect for the button */
+button:hover {
+  background-color: hsl(210, 50%, 40%);
+}
+
+/* Heading for the favorites list */
+h2 {
+  margin-top: 40px;
+  font-size: 2rem;
+  color: hsl(210, 50%, 30%);
+}
+
+/* List of favorite colors and history */
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Individual favorite color item */
+ul li {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Text inside the favorite color item */
+ul li p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Remove button inside each favorite color */
+ul li button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: white;
+  font-size: 0.8rem;
+  padding: 3px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the remove button */
+ul li button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Styling for the color harmonies section */
+.color-schemes {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Centered titles for color harmonies */
+.color-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: hsl(210, 50%, 30%);
+}
+
+/* Color swatches styling */
+.color-swatch {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+/* Styling for color rows */
+.color-row {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  margin-bottom: 20px;
+}
+
+/* Export section */
+.export-section {
+  text-align: center; /* Center text and buttons */
+  margin-top: 20px;
+}
+
+/* Styling for export instructions text */
+.export-instructions {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: hsl(0, 0%, 40%);
+}
+
+/* Container for export buttons */
+.export-buttons {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  margin-top: 20px;
+  padding-bottom: 20px; /* Add padding below export buttons */
+}
+
+/* Styling for export buttons */
+.export-buttons button {
+  margin: 0 10px; /* Space between buttons */
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for export buttons */
+.export-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Container for the color history box */
+
+
+/* Box to display the current color in color history */
+
+
+/* Ensure the color history title is centered */
+.color-history-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.color-history-container {
+  width: 25%;
+  margin-top: 20px;
+}
+
+.color-history-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+  gap: 5px; /* Small gap between boxes */
+}
+
+.color-history-box {
+  width: 30px; /* Smaller box width */
+  height: 30px; /* Smaller box height */
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 8px; /* Smaller text to fit the smaller box */
+  text-align: center;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px; /* Small margin below each box */
+}
+
+.color-history-container {
+  width: 25%;
+  margin-top: 20px;
+}
+
+.color-history-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+  gap: 5px; /* Small gap between boxes */
+}
+
+.color-history-box {
+  width: 30px; /* Smaller box width */
+  height: 30px; /* Smaller box height */
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 8px; /* Smaller text to fit the smaller box */
+  text-align: center;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px; /* Small margin below each box */
+}
+
+
+
+.color-history-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between color history boxes */
+}
+
+.color-history-box {
+  width: 60px; /* Reduced width for compact display */
+  height: 60px; /* Reduced height for compact display */
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px; /* Smaller font size */
+  text-align: center;
+  margin: 5px;
+}
+
+.favorite-color-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-conversion-section {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.color-conversion-section h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.color-conversion-section button {
+  margin: 5px;
+}
+
+.color-conversion-section p {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
